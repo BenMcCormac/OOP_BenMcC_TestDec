@@ -2,12 +2,12 @@ package ie.atu;
 
 public class ShiftWorker
 {
-    private char Name;
-    private char Gender;
+    private String Name;
+    private String Gender;
     private int Shift;
     private int Age;
 
-    public ShiftWorker(char name, char gender, int shift, int age) {
+    public ShiftWorker(String name, String gender, int shift, int age) {
         Name = name;
         Gender = gender;
         Shift = shift;
@@ -15,25 +15,25 @@ public class ShiftWorker
     }
 
     public ShiftWorker() {
-        Name = ' ';
-        Gender = ' ';
+        Name = "";
+        Gender = "";
         Shift = ' ';
         Age = ' ';
     }
 
-    public char getName() {
+    public String getName() {
         return Name;
     }
 
-    public void setName(char name) {
+    public void setName(String name) {
         Name = name;
     }
 
-    public char getGender() {
+    public String getGender() {
         return Gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         Gender = gender;
     }
 
