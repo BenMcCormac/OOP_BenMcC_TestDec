@@ -56,16 +56,28 @@ public class Main {
                         x=100;
                         break;
                     default:
-                        System.out.println("Please enter a valid name");
+                        System.out.println("Please enter a valid Gender");
                         break;
                 }
             }
 
             System.out.println("Please enter ShiftWorker Age:\t");
+
             ageTemp = scanner.nextInt();
 
+            if(ageTemp < 18)
+            {
+                System.out.println("Invalid Age");
+            }
+
+
             System.out.println("Please enter ShiftWorker Shift:\t");
-            shiftTemp = scanner.nextInt();
+            try {
+                shiftTemp = scanner.nextInt();
+            }catch (InputMismatchException e)
+            {
+                System.out.println("Must be an integer");
+            }
 
             ShiftWorker No1 = new ShiftWorker(nameTemp, genderTemp, shiftTemp, ageTemp);
         }catch(InstantiationError No1)
